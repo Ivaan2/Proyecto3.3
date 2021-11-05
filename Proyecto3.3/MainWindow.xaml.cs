@@ -24,5 +24,19 @@ namespace Proyecto3._3
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+            if ((bool)this.modalidad1.IsChecked)
+            {
+                MessageBox.Show("Nombre: " + this.nombre.Text + ", apellidos: " + this.apellidos.Text + ". \nCurso: " + this.curso.Text + ", modalidad: " + this.modalidad1.Content);
+            }
+            else
+            {
+                MessageBox.Show("Nombre: " + this.nombre.Text + ", apellidos: " + this.apellidos.Text + ". \nCurso: " + this.curso.Text + ", modalidad: " + this.modalidad2.Content);
+            }
+        }
+        
     }
 }

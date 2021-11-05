@@ -11,38 +11,52 @@
             <ColumnDefinition Width="264"/>
             <ColumnDefinition Width="528"/>
         </Grid.ColumnDefinitions>
+        
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
             <Image Source="logoJA.png" Width="150" Margin="0,50,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Orientation="Vertical" Background="Aquamarine">
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,100,0,0">
-                <Label Content="Name: " Width="80"/>
-                <TextBox Width="150" HorizontalAlignment="Right"/>
+        <Border Background="#007336" Grid.Column="1"/>
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,75,0,0">
+                <Label Content="Nombre: " Width="80"/>
+                <TextBox Width="150" HorizontalAlignment="Right" Name="nombre"/>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Surname: " Width="80"/>
-                <TextBox Width="150" HorizontalAlignment="Right"/>
+            
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Apellidos: " Width="80"/>
+                <TextBox Width="150" HorizontalAlignment="Right" Name="apellidos"/>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Birthday: " Width="80"/>
+            
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Edad: " Width="80"/>
                 <DatePicker Width="150" Text="Birthday"/>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Studies: " Width="80"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Estudios: " Width="80"/>
                 <ComboBox Width="150">
                     <ComboBoxItem>CFGM</ComboBoxItem>
                     <ComboBoxItem>CFGS</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Available courses: " Width="80"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Cursos: " Width="80"/>
+
+                <ComboBox Width="150" Name="curso">
+                    <ComboBoxItem>DAM</ComboBoxItem>
+                    <ComboBoxItem>DAW</ComboBoxItem>
+                    <ComboBoxItem>SMR</ComboBoxItem>
+                    <ComboBoxItem>ASIR</ComboBoxItem>
+                    <ComboBoxItem>Imagen y Sonido</ComboBoxItem>
+                </ComboBox>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Modality: " Width="80"/>
-                
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0" Width="230">
+                <Label Content="Modalidad: " Width="80" VerticalAlignment="Center"/>
+                <RadioButton Content="Mañana" VerticalAlignment="Center" Margin="10,0,0,0" Name="modalidad1"/>
+                <RadioButton Content="Tarde" VerticalAlignment="Center" Margin="15,0,0,0" Name="modalidad2"/>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,0">
-                <Label Content="Province: " Width="80"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Content="Provincia: " Width="80"/>
                 <ComboBox Width="150">
                     <ComboBoxItem>Cádiz</ComboBoxItem>
                     <ComboBoxItem>Sevilla</ComboBoxItem>
@@ -53,6 +67,9 @@
                     <ComboBoxItem>Almería</ComboBoxItem>
                     <ComboBoxItem>Málaga</ComboBoxItem>
                 </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0,30,0,0">
+                <Button Content="Enviar" Width="80" HorizontalAlignment="Center" Click="Button_Click" Name="button"/>
             </StackPanel>
         </StackPanel>
 
